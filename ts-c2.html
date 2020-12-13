@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>好时光女装城</title>
+    <meta name="keywords" content="好时光女装城">
+<meta name="description" content="好时光女装城">
+    <link href="css/style.css"rel="stylesheet">   
+    <link href="css/share.css"rel="stylesheet">
+    <script src="js/jquery-1.12.3.js"></script>
+</head>
+<body>
+<!--顶部导航--><div class="top">
+	<div  class="top-kuang">
+	<div class="top-part1">
+		<ul>
+			<div class="top-part1-left">
+					<img src="images/top-home.png" /><span>首页</span><span>hi，请登录 !</span>
+			</div>
+			<div class="top-part1-right">
+					<span>我的淘宝</span> <img src="images/top-car.png" /><span>购物车</span><span>收藏夹 | </span><img src="images/top-phone.png"/><span>手机版</span><span>淘宝网</span><span>商家支持</span> <img src="images/top-more.jpg"/> <span>网站导航</span>
+			</div>
+		
+		</ul>
+	</div></div>
+	<div class="top-part2">
+		<ul>
+		<div class="top-part1-left">
+			<img style="width: 180px; padding: 30px; padding-left: 0px; height: auto;"  src="images/logo1.jpg">
+			<div style="display: flex; border-left:1px #e3e3e3 solid ;width: 100px; border-right:1px #e3e3e3 solid ; padding-left: 10px; padding-right: 10px; flex-wrap:wrap ;"><span style="width: 100%;">好时光女装城</span>
+					<img style="width: auto; height: 30px;" src="images/top-kefu.png">
+					</div>
+					<div class="top-fuwu" ><span>描述<br><i>4.6↑</i></span> <span>服务<br><i>4.5↓</i></span> <span>物流<br><i>4.5↑</i></span>
+			</div></div>
+			<div class="top-part1-right">
+					 <form style=" background: #DF5000; padding: 3px;" action="" class="parent">
+        <input style="background: #fff; padding-left:5px; width: 300px; height: 30px; " type="text" class="search" placeholder="搜索">
+        <input style="color: #fff; margin-right:6px; border-right: 1px #fff solid; padding: 6px; padding-right: 12px; " type="button" name="" id="" class="btn" value="搜淘宝" >
+          <input style="color: #fff;margin-right:6px;  " type="button" name="" id="" class="btn" value="搜本店">
+    </form>
+
+			</div>
+		</ul>
+	</div>		
+	
+</div>
+<div class="headr">
+    <div class="heard-con">
+        <img src="images/logo.jpg" style="margin-top: 7px;float: left;position: absolute">
+        <div class="headr-nav">
+             <ul>
+                       <li><a href="index.html"><span >首页</span></a> </li>
+                <li><a href="yyk.html">优衣库</a> </li>
+                <li  class="active-li"><a href="ts.html">唐狮</a> </li>
+                <li><a href="lp.html">无印良品</a></li>
+                <li><a href="hd.html">韩都衣舍</a></li>
+                <li><a href="liuyan.html">粉丝留言</a></li>
+              
+                <li><a href="zuce.html">注册</a> </li>
+               <li><a href="login.html">登录</a></li>
+             
+            </ul>
+          
+        </div>
+     
+    </div>
+</div>
+<!--顶部导航结束-->
+<!--banner图片-->
+<!--当前位置-->
+<div class="width1200 center_yh hidden_yh font14" style="height:40px;line-height:40px;">
+	<span>当前位置:</span><a href="#" class="c_66">首页></a><a href="#" class="c_66">唐狮></a><a href="#" class="c_66">详情</a>
+</div>
+<!--商品详情-->
+<div class="width1200 center_yh hidden_yh" style="height:420px;">
+	<div class="left_yh" style="width:350px;height:420px;">
+    	<script src="js/163css.js"></script>
+        <script src="js/lib.js"></script>
+		<div id="preview">
+				<div class=jqzoom id="spec-n1" onClick="window.open('/')">
+                	<IMG height="350" src="images/ts/2.jpg" jqimg="images/T1CtvCXaFjXXcVIIsU_014122.jpg" width="350">
+				</div>
+					<div id="spec-n5">
+						<div class=control id="spec-left">
+								<li><img src="images/ht-5.png"></li>
+						</div>
+						<div id="spec-list">
+							<ul class="list-h">
+								<li><img src="images/ts/2.jpg"></li>
+									
+							</ul>
+						</div>
+						<div class=control id="spec-right">
+								<li><img src="images/ht-5.png"></li>
+						</div>
+					</div>
+				</div>
+		<script type=text/javascript>
+            $(function(){			
+                   $(".jqzoom").jqueryzoom({
+                        xzoom:400,
+                        yzoom:400,
+                        offset:10,
+                        position:"right",
+                        preload:1,
+                        lens:1
+                    });
+                    $("#spec-list").jdMarquee({
+                        deriction:"left",
+                        width:350,
+                        height:56,
+                        step:2,
+                        speed:4,
+                        delay:10,
+                        control:true,
+                        _front:"#spec-right",
+                        _back:"#spec-left"
+                    });
+                    $("#spec-list img").bind("mouseover",function(){
+                        var src=$(this).attr("src");
+                        $("#spec-n1 img").eq(0).attr({
+                            src:src.replace("\/n5\/","\/n1\/"),
+                            jqimg:src.replace("\/n5\/","\/n0\/")
+                        });
+                        $(this).css({
+                            "border":"2px solid #ff6600",
+                            "padding":"1px"
+                        });
+                    }).bind("mouseout",function(){
+                        $(this).css({
+                            "border":"",
+                            "padding":"0"
+                        });
+                    });				
+                })
+        </script>
+    </div>
+    <div class="left_yh" style="width:486px;height:420px;margin-left:42px;">
+    	<h3 class="font20 font100">唐狮加绒加厚卫衣女 秋冬新款长袖韩版宽松女士连帽卫衣女潮</h3>
+        <p class="font16 c_66" style="margin-top:25px;">
+        	<font style="margin-right:20px;">价格:</font>
+            <font class="red font20">
+            	<em class="font14" style="font-style:normal">￥</em>
+                139.00
+            </font>
+            <font class="font14 c_66">(运费10元)</font>
+        </p>
+        <p class="font16 c_66" style="margin-top:25px;">
+        	<font style="margin-right:20px;">已卖:</font>
+            <font class="">126件</font>
+        </p>
+       
+        <p class="font16 c_66 likeColor" style="margin-top:25px;">
+        	<font style="margin-right:20px;">规格:</font>
+            <span>S</span>
+            <span>M</span>
+            <span>L</span>
+        </p>
+        <p class="font16 c_66 likeColor" style="margin-top:25px;">
+        	<font style="margin-right:20px;">数量:</font>
+        	<a href="javascript:void(0)" id="min_s">-</a>
+            <input type="text" value="1" readonly id="t_a">
+            <a href="javascript:void(0)" id="add_s">+</a>
+            <font class="font14 c_99" style="margin-left:20px;">库存100件</font>
+        	<script>
+			$(".likeColor span").click(function(){
+				$(this).addClass("on").siblings().removeClass("on")
+				})
+			var tr=$("#t_a").val();
+			$("#add_s").click(function(){
+					tr++;
+					$("#t_a").val(tr)
+				})
+			$("#min_s").click(function(){
+				tr--;
+				if(tr<1){
+					$("#t_a").val(1);
+					tr=1
+				}else{
+					$("#t_a").val(tr);
+				}
+					$("#ano").html(tr);
+			})	
+        </script>
+        </p>
+        <div class="buyFor">
+        	<a href="javascript:void(0)" class="mstBuy">立即购买</a>
+            <a href="javascript:void(0)" class="addCar">加入购物车</a>
+        </div>
+        <div class="jOy">
+        	<a href="javascript:void(0)">收藏</a>
+            <a href="javascript:void(0)">分享</a>
+        </div>
+    </div>
+    <div class="right_yh" style="width:198px;height:418px;margin-left:42px;padding-left:40px;padding-right:40px;border:1px solid #ddd">
+    	<h3 class="tcenter font16 font100" style="margin-top:10px;">------&nbsp;今日推荐&nbsp;------</h3>
+        <a href="lp-c2.html" class="lftSp">
+        	<img src="images/lp/2.jpg">
+            <span class="yihang">无印良品 MUJI 女式 粗细不均天竺编织 五分袖T恤</span>
+            <p class="tcenter c_66">￥54.0</p>
+        </a>
+        <a href="lp-c1.html" class="lftSp">
+        	<img src="images/lp/1.jpg">
+            <span class="yihang">无印良品 MUJI 女式 新疆棉珠地网眼编织 七分袖T恤</span>
+            <p class="tcenter c_66">￥130.0</p>
+        </a>
+        
+    </div>
+</div>
+<!--左边和右边-->
+<div class="width1200 hidden_yh center_yh" style="margin-top:40px;">
+	<div class="left_yh hidden_yh" style="width:270px;border:1px solid #ddd;padding-bottom:36px;">
+    	<h3 class="font16 c_33 font100 tcenter" style="padding-top:10px;padding-bottom:10px;">购买过该商品的用户还购买了</h3>
+        <a href="yyk-c2.html" class="center_yh hidden_yh block_yh" style="width:250px;margin-top:25px;">
+        	<img src="images/yyk/2.jpg" class="left_yh" width="105" height="115">
+            <div class="left_yh" style="width:120px;margin-left:25px;">
+            	<h4 class="font14 c_33 font100" style="margin-top:6px;">【设计师合作款】女装 半高领T恤(长袖) 420697 优衣库UNIQLO</h4>
+                <p class="red font14" style="margin-top:6px;">￥79.0</p>
+            </div>
+        </a>
+         <a href="yyk-c1.html" class="center_yh hidden_yh block_yh" style="width:250px;margin-top:25px;">
+        	<img src="images/yyk/1.jpg" class="left_yh" width="105" height="115">
+            <div class="left_yh" style="width:120px;margin-left:25px;">
+            	<h4 class="font14 c_33 font100" style="margin-top:6px;">女装/亲子装 华夫格圆领T恤(七分袖) 418234 优衣库UNIQLO
+</h4>
+                <p class="red font14" style="margin-top:6px;">￥79.0</p>
+            </div>
+        </a>
+    </div>
+    <div class="right_yh" style="width:888px;">
+    	<div class="hidden_yh" id="spXqpj">
+        	<a href="javascript:void(0)" class="on">商品详情</a>
+            <a href="javascript:void(0)">商品评价</a>
+        </div>
+        <div class="width100 hidden_yh">
+        	<!--商品详情-->
+            <div id="spDetil">
+            	<img src="images/ts/xq2/1572689035(1).jpg" class="spPic">
+				<img src="images/ts/xq2/1572689041(1).jpg" class="spPic" >
+                <img src="images/ts/xq2/1572689058(1).jpg" class="spPic">
+            </div>
+            <!--商品评价-->
+            <div id="spPj">
+            	<div class="pjYxz">
+                    <a href="javascript:void(0)"><input type="radio" name="as" checked id="nn0" style="margin-right:8px;"><label for="nn0">全部</label></a>
+                    <a href="javascript:void(0)"><input type="radio" name="as" id="nn1" style="margin-right:8px;"><label for="nn1">好评</label></a>
+                    <a href="javascript:void(0)"><input type="radio" name="as" id="nn2" style="margin-right:8px;"><label for="nn2">差评</label></a>
+                </div>
+                <div class="pjBox">
+                	<!--全部-->
+                    <div class="pjBoxA">
+                    	<!--一条-->
+                        <div class="width100 hidden_yh" style="padding-bottom:20px;border-bottom:1px dashed #ddd;margin-bottom:10px;">
+                        	<img src="images/x.jpg" style="width:40px;height:40px;border-radius:50%;float:left;border:1px solid #ddd;">
+                            <div style="width:790px;float:right;overflow:hidden;">
+                            	<h3 class="font16 c_33 font100">小***飞</h3>
+                                <p class="font14 c_99" style="margin-top:6px;">2017-6-7</p>
+                                <p class="font16 c_33" style="margin-top:6px;">穿起来整体效果好，显瘦，纯棉质地，比想象中薄些，过水稍稍褪色</p>
+                            </div>
+                        </div>
+                        <div id="navs">
+                        <div id="nav_in">
+                        <a href="javascript:void(0)">«</a>
+                        <a href="javascript:void(0)">1</a>
+                        <a href="javascript:void(0)">2</a>
+                        <a href="javascript:void(0)">3</a>
+                        <a href="javascript:void(0)">4</a>
+                        <a href="javascript:void(0)">5</a>
+                        <a href="javascript:void(0)">»</a>
+                        </div>
+                        </div>
+                    </div>
+                    <!--好评-->
+                    <div class="pjBoxG">
+                    	<div class="width100 hidden_yh" style="padding-bottom:20px;border-bottom:1px dashed #ddd;margin-bottom:10px;">
+                        	<img src="images/x.jpg" style="width:40px;height:40px;border-radius:50%;float:left;border:1px solid #ddd;">
+                            <div style="width:790px;float:right;overflow:hidden;">
+                            	<h3 class="font16 c_33 font100">小***飞</h3>
+                            	<p class="font14 c_99" style="margin-top:6px;">2017-6-7</p>
+                            	<p class="font16 c_33" style="margin-top:6px;">穿起来整体效果好，显瘦，纯棉质地，比想象中薄些，过水稍稍褪色</p>
+                            </div>
+                        </div>
+                        <div id="navs">
+                        <div id="nav_in">
+                        <a href="javascript:void(0)">«</a>
+                        <a href="javascript:void(0)">1</a>
+                        <a href="javascript:void(0)">2</a>
+                        <a href="javascript:void(0)">3</a>
+                        <a href="javascript:void(0)">4</a>
+                        <a href="javascript:void(0)">5</a>
+                        <a href="javascript:void(0)">»</a>
+                        </div>
+                        </div>
+                    </div>
+                    <!--差评-->
+                    <div class="pjBoxL">
+                    	<div class="width100 hidden_yh" style="padding-bottom:20px;border-bottom:1px dashed #ddd;margin-bottom:10px;">
+                        	<img src="images/x.jpg" style="width:40px;height:40px;border-radius:50%;float:left;border:1px solid #ddd;">
+                            <div style="width:790px;float:right;overflow:hidden;">
+                            	<h3 class="font16 c_33 font100">小***飞</h3>
+                            	<p class="font14 c_99" style="margin-top:6px;">2017-6-7</p>
+                            	<p class="font16 c_33" style="margin-top:6px;">穿起来整体效果好，显瘦，纯棉质地，比想象中薄些，过水稍稍褪色</p>
+                            </div>
+                        </div>
+                        <div id="navs">
+                        <div id="nav_in">
+                        <a href="javascript:void(0)">«</a>
+                        <a href="javascript:void(0)">1</a>
+                        <a href="javascript:void(0)">2</a>
+                        <a href="javascript:void(0)">3</a>
+                        <a href="javascript:void(0)">4</a>
+                        <a href="javascript:void(0)">5</a>
+                        <a href="javascript:void(0)">»</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$("#spXqpj a").click(function(){
+	$(this).addClass("on").siblings().removeClass("on")
+	});
+$("#spXqpj a").eq(0).click(function(){
+	$("#spDetil").css({display:"block"}).siblings().css({display:"none"});
+	})
+$("#spXqpj a").eq(1).click(function(){
+	$("#spPj").css({display:"block"}).siblings().css({display:"none"});
+	})
+$(".pjYxz a").eq(0).click(function(){
+	$(".pjBoxA").css({display:"block"}).siblings().css({display:"none"});
+	})
+$(".pjYxz a").eq(1).click(function(){
+	$(".pjBoxG").css({display:"block"}).siblings().css({display:"none"});
+	})
+$(".pjYxz a").eq(2).click(function(){
+	$(".pjBoxL").css({display:"block"}).siblings().css({display:"none"});
+	})
+</script>
+<!--品质保证-->
+
+
+    <!--产品推荐结束-->
+</div>
+
+        <div class="banq">
+        	<ul>
+         <dd><br> <p>© 淘宝网 版权所有</p></dd></ul>
+        </div>
+
+    </div>
+
+</div>
+</body>
+
+</html>
